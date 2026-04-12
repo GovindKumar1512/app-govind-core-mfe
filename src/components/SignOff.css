@@ -1,0 +1,95 @@
+/* Center the card on screen */
+
+.signoff-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 900px;
+  min-height: 45vh;
+  margin: 80px auto;
+  padding: 32px;
+  border: 1px solid #b0b0b0;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+
+.signoff-actions {
+  margin-top: auto;              /* Push to bottom */
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;          /* Right aligned */
+  gap: 10px;
+}
+
+
+.signon-code {
+  font-size: 14px;
+  color: rgb(54, 55, 57);
+  text-align: right;
+  margin-right:40px;
+}
+
+
+
+/* signoff button (RED) */
+
+
+.btn-signoff {
+  padding: 12px 40px;
+  background-color: #d71e28;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 9999px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 180px;
+  height: 48px;
+
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-signoff:hover {
+  background-color: #a30303;
+}
+
+.signoff-title {
+  margin: 15px 0px 0px 15px;
+  color: rgb(54, 55, 57);
+  font-size:36px;
+}
+
+.signoff-content-text {
+  margin: 10px 0 50px 0;
+  color: rgb(54, 55, 57);
+  font-size:26px;
+}
+
+.bold-text {
+  font-weight: 700;   
+}
+
+
+@media (max-width: 576px) {
+  .signoff-actions {
+    align-items: center;
+  }
+
+  .signon-code {
+    text-align: center;
+  }
+}
+
+
+

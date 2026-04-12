@@ -1,0 +1,75 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  box-sizing: border-box;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d32f2f;
+  color: #fff;
+  padding: 0.75rem 1.5rem 0.5rem 1.5rem;
+  border-bottom: 5px solid #ffc72c; /* Wells Fargo yellow */
+}
+
+.header-left {
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 #b71c1c, 0 2px 0 #b71c1c;
+}
+
+.header-right {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.header-icon {
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.header-icon:hover {
+  color: #ffd700;
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding: 0.75rem 0.5rem 0.5rem 0.5rem;
+  }
+  .header-left {
+    font-size: 1.1rem;
+  }
+  .header-right {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 0.2rem 0.4rem 0.2rem;
+  }
+  .header-left {
+    font-size: 1rem;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  padding-top: 80px; /* Adjust if header height changes */
+}

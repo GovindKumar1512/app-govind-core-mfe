@@ -1,0 +1,168 @@
+
+/* Page container */
+
+.page-container {
+  position: fixed;
+  top: 60px;                     /* header height + yellow line */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;              /* ✅ content scrolls */
+  padding: 35px;
+  background-color: transparent; /* ✅ uses fixed body bg */
+    background-color: #d0cccc;
+}
+
+
+/* Card */
+.card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 58vw; /* ✅ desktop width */
+  padding: 24px;
+  min-height: 270px;
+  height:auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  margin-bottom:220px;
+  position:fixed;
+}
+
+/* Greeting */
+.card .greeting-day {
+  margin-bottom: 32px;
+  font-size: clamp(18px, 3vw, 24px);
+  color: #3B3331;
+}
+
+.card h4 {
+  margin-top: 24px;
+  font-size: clamp(14px, 2vw, 17px);
+  color: rgb(100, 98, 98);
+}
+
+/* Dropdown row */
+.dropdown-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 28px;
+  flex-wrap: wrap; /* ✅ allow wrap */
+}
+
+/* Individual dropdown */
+.dropdown-group {
+  flex: 1;
+  min-width: 250px; /* ✅ prevents squishing */
+}
+
+/* Labels */
+.role,
+.location {
+  color: #b0b0b0;
+  
+}
+
+/* Select wrapper */
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Underline dropdown */
+.underline-select {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #707070;
+  padding: 8px 32px 8px 0;
+  font-size: clamp(16px, 2.5vw, 20px);
+  background-color: transparent;
+  color: #3b3b5b;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+/* Dropdown arrow */
+.dropdown-arrow {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Button row */
+.button-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 28px;
+  flex-wrap: wrap; /* ✅ mobile wrap */
+}
+
+/* Cancel button */
+.btn-cancel {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  color: #3d3d9e;
+  background: white;
+  font-size: 16px;
+  margin:30px 75px 0px 0px;
+}
+
+/* Continue button */
+.btn-continue {
+  padding: 12px 40px;
+  background-color: #d71e28;
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 180px;
+  height: 48px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin:30px 0px 0px 0px;
+}
+
+/* Hover */
+.btn-cancel:hover {
+  background-color: #e0e0e0;
+}
+
+.btn-continue:hover {
+  background-color: #a30303;
+}
+
+/* ✅ MOBILE FIXES */
+@media (max-width: 768px) {
+  .dropdown-row {
+    flex-direction: column;
+  }
+
+  .button-row {
+    justify-content: center;
+  }
+
+  .btn-continue {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 20px;
+  }
+
+  .btn-cancel,
+  .btn-continue {
+    width: 100%;
+  }
+}
